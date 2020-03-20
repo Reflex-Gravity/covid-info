@@ -9,6 +9,7 @@
     "autoprefixer": "^9.7.4",
     "axios": "^0.19.2",
     "bizcharts": "^3.5.8",
+    "cssnano": "^4.1.10",
     "postcss-cli": "^7.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -16,9 +17,9 @@
     "tailwindcss": "^1.2.0"
   },
   "scripts": {
-    "build:style": "tailwind build src/styles/index.css -c ./tailwind.config.js -o src/styles/tailwind.css",
-    "start": "npm run build:style && react-scripts start",
-    "build": "react-scripts build",
+    "build:css": "postcss src/styles/index.css -o src/styles/tailwind.css",
+    "start": "yarn run build:css && react-scripts start",
+    "build": "yarn run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
