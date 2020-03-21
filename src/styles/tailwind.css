@@ -28,6 +28,10 @@ body {
  * Render the `main` element consistently in IE.
  */
 
+main {
+  display: block;
+}
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -321,6 +325,14 @@ code {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.static {
+  position: static;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .w-full {

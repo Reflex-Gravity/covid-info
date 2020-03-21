@@ -8,11 +8,11 @@ export function getCasesByCountry(country, callback){
         axios
             .get(url)
             .then( (response) => {
-                console.log(response)
-                callback(response)
+                if(response.status>=200 && response.status<=300)
+                    callback(response.data)
             })
             .catch( err => {
-    
+                console.error("Api call error", err)
             })
     } catch( err ){
         console.error("Error:: getCasesByCountry", err)
